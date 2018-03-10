@@ -19,34 +19,66 @@ namespace SoapBilletSystem
         MC mc1 = new MC();
         MCØresund mc2 = new MCØresund();
 
-        public string BilTypeSOAP()
+        public string BilTypeSOAP(Bil bil)
         {
-            return bil1.KøreTøjType();
+            return bil.KøreTøjType();
         }
 
-        public int BilPrisSOAP()
+        public int BilPrisSOAP(Bil bil)
         {
-            return bil1.Pris();
+            return bil.Pris();
         }
 
-        public string MCTypeSOAP()
+        public string MCTypeSOAP(MC mc)
         {
-            return mc1.KøreTøjType();
+            return mc.KøreTøjType();
         }
 
-        public int MCPrisSOAP()
+        public int MCPrisSOAP(MC mc)
         {
-            return mc1.Pris();
+            return mc.Pris();
         }
 
-        public int ØresundBilPrisSOAP()
+        public int ØresundBilPrisSOAP(BilØreSund bil)
         {
-            return bil2.Pris();
+            return bil.Pris();
         }
 
-        public int ØresundMCPrisSOAP()
+        public int ØresundMCPrisSOAP(MCØresund mc)
         {
-            return mc2.Pris();
+            return mc.Pris();
+        }
+
+        public Bil CreateBilSOAP(string nummerplade)
+        {
+            Bil bil = new Bil();
+            bil.NummerPlade = nummerplade;
+
+            return bil;
+        }
+
+        public BilØreSund CreateBilOSOAP(string nummerplade)
+        {
+            BilØreSund bilO = new BilØreSund();
+            bilO.NummerPlade = nummerplade;
+
+            return bilO;
+        }
+
+        public MC CreateMCSOAP(string nummerplade)
+        {
+            MC mc = new MC();
+            mc.NummerPlade = nummerplade;
+
+            return mc;
+        }
+
+        public MCØresund CreateMCOSOAP(string nummerplade)
+        {
+            MCØresund mco = new MCØresund();
+            mco.NummerPlade = nummerplade;
+
+            return mco;
         }
     }
 }

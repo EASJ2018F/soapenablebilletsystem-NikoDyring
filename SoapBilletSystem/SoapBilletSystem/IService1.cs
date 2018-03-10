@@ -14,18 +14,25 @@ namespace SoapBilletSystem
     public interface IService1
     {
         [OperationContract]
-        int BilPrisSOAP();
+        int BilPrisSOAP(Bil bil);
         [OperationContract]
-        int ØresundBilPrisSOAP();
+        int ØresundBilPrisSOAP(BilØreSund bil);
         [OperationContract]
-        int MCPrisSOAP();
+        int MCPrisSOAP(MC mc);
         [OperationContract]
-        int ØresundMCPrisSOAP();
+        int ØresundMCPrisSOAP(MCØresund mc);
         [OperationContract]
-        string BilTypeSOAP();
+        string BilTypeSOAP(Bil bil);
         [OperationContract]
-        string MCTypeSOAP();
-
+        string MCTypeSOAP(MC mc);
+        [OperationContract]
+        Bil CreateBilSOAP(string nummerplade);
+        [OperationContract]
+        BilØreSund CreateBilOSOAP(string nummerplade);
+        [OperationContract]
+        MC CreateMCSOAP(string nummerplade);
+        [OperationContract]
+        MCØresund CreateMCOSOAP(string nummerplade);
     }
 
 }

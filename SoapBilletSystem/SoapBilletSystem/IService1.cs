@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using BilletLib;
 
 namespace SoapBilletSystem
 {
@@ -12,7 +13,15 @@ namespace SoapBilletSystem
     [ServiceContract]
     public interface IService1
     {
-
+        
+        [OperationContract]
+        string BilKøretøjTypeSOAP(Bil bil);
+        [OperationContract]
+        string MCKøretøjTypeSOAP(MC mc);
+        //[OperationContract]
+        //Bil OpretBilSOAP(string nummerplade, int pris);
+        //[OperationContract]
+        //MC OpretMCSOAP(string nummerplade, int pris);
     }
 
 }

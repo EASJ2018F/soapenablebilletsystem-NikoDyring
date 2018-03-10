@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using BilletLib;
 
 namespace SoapBilletSystem
 {
@@ -13,5 +14,30 @@ namespace SoapBilletSystem
     public class Service1 : IService1
     {
 
+        public string BilKøretøjTypeSOAP(Bil bil)
+        {
+            bil = new Bil("AA12345", 240);
+            return bil.TypeAfKøretøj();
+        }
+
+        public string MCKøretøjTypeSOAP(MC mc)
+        {
+            mc = new MC("AA12345", 120);
+            return mc.TypeAfKøretøj();
+        }
+
+        //public Bil OpretBilSOAP(string nummerplade, int pris)
+        //{
+        //    //Bil bil1 = new Bil(nummerplade, pris);
+        //    //return bil1;
+        //    return bil22;
+        //}
+
+        //public MC OpretMCSOAP(string nummerplade, int pris)
+        //{
+        //    //MC mc1 = new MC(nummerplade, pris);
+        //    //return mc1;-
+        //    return MC22;
+        //}
     }
 }

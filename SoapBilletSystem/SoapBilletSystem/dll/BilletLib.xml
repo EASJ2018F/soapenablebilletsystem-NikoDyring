@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BilletLib</name>
+    </assembly>
+    <members>
+        <member name="M:BilletLib.Bil.TypeAfKøretøj">
+            <summary>
+            Returnere typen af køretøj i form af en string, alt efter om Øresundsbroen er true.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BilletLib.Bil.LængdeAfNummerplade">
+            <summary>
+            Returnere nummerpladen hvis længden af nummerpladen er mindre end 7, ellers kaster den en exception.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BilletLib.Bil.WeekendRabatIBil">
+            <summary>
+            Udregner vores weekend rabat. Hvis vi ikke kører over Øresundsbroen er bil-prisen 240. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BilletLib.Bil.#ctor(System.String,System.Int32)">
+            <summary>
+            Constructor som sætter vores dato til hverdagen idag. Udover det sætter vi vores bools til False. 
+            </summary>
+        </member>
+        <member name="M:BilletLib.Kunde.UdregnSum">
+            <summary>
+            Udregner sum for alle køretøjer.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BilletLib.MC.TypeAfKøretøj">
+            <summary>
+            Returnere typen af køretøj i form af en string, alt efter om Øresundsbroen er true.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BilletLib.MC.LængdeAfNummerplade">
+            <summary>
+            Returnere nummerpladen hvis længden af nummerpladen er mindre end 7, ellers kaster den en exception.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BilletLib.MC.#ctor(System.String,System.Int32)">
+            <summary>
+             Constructor, som sætter vores brobizz til at være false.
+            </summary>
+        </member>
+        <member name="M:BilletLib.Vehicle.Pris">
+            <summary>
+            Prismetoden som Udregner største delen af mulige priser. 
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

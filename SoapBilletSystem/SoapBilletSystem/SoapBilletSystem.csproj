@@ -45,6 +45,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>dll\BilletLib.dll</HintPath>
     </Reference>
+    <Reference Include="BilletLibrary">
+      <HintPath>dll\BilletLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />

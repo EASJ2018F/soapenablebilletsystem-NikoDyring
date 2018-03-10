@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
-using BilletLib;
+using BilletLibrary;
 
 namespace SoapBilletSystem
 {
@@ -13,31 +13,40 @@ namespace SoapBilletSystem
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
+        // Library Objects.
+        Bil bil1 = new Bil();
+        BilØreSund bil2 = new BilØreSund();
+        MC mc1 = new MC();
+        MCØresund mc2 = new MCØresund();
 
-        public string BilKøretøjTypeSOAP(Bil bil)
+        public string BilTypeSOAP()
         {
-            bil = new Bil("AA12345", 240);
-            return bil.TypeAfKøretøj();
+            return bil1.KøreTøjType();
         }
 
-        public string MCKøretøjTypeSOAP(MC mc)
+        public int BilPrisSOAP()
         {
-            mc = new MC("AA12345", 120);
-            return mc.TypeAfKøretøj();
+            return bil1.Pris();
         }
 
-        //public Bil OpretBilSOAP(string nummerplade, int pris)
-        //{
-        //    //Bil bil1 = new Bil(nummerplade, pris);
-        //    //return bil1;
-        //    return bil22;
-        //}
+        public string MCTypeSOAP()
+        {
+            return mc1.KøreTøjType();
+        }
 
-        //public MC OpretMCSOAP(string nummerplade, int pris)
-        //{
-        //    //MC mc1 = new MC(nummerplade, pris);
-        //    //return mc1;-
-        //    return MC22;
-        //}
+        public int MCPrisSOAP()
+        {
+            return mc1.Pris();
+        }
+
+        public int ØresundBilPrisSOAP()
+        {
+            return bil2.Pris();
+        }
+
+        public int ØresundMCPrisSOAP()
+        {
+            return mc2.Pris();
+        }
     }
 }
